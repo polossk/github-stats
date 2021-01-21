@@ -73,7 +73,7 @@ class Queries(object):
                                                params=tuple(params.items()))
                 if r.status == 202:
                     # print(f"{path} returned 202. Retrying...")
-                    print(f"A path returned 202. Retrying...")
+                    print(f"Line 76: A path returned 202. Retrying...")
                     await asyncio.sleep(2)
                     continue
 
@@ -88,7 +88,7 @@ class Queries(object):
                                      headers=headers,
                                      params=tuple(params.items()))
                     if r.status_code == 202:
-                        print(f"A path returned 202. Retrying...")
+                        print(f"Line 91: A path returned 202. Retrying...")
                         await asyncio.sleep(2)
                         continue
                     elif r.status_code == 200:
