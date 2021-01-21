@@ -103,8 +103,10 @@ async def main() -> None:
     exclude_repos = ({x.strip() for x in exclude_repos.split(",")}
                      if exclude_repos else None)
     exclude_langs = os.getenv("EXCLUDED_LANGS")
+    print(exclude_langs)
     exclude_langs = ({x.strip() for x in exclude_langs.split(",")}
                      if exclude_langs else None)
+    print(exclude_langs)
     async with aiohttp.ClientSession() as session:
         s = Stats(user, access_token, session, exclude_repos=exclude_repos,
                   exclude_langs=exclude_langs)
